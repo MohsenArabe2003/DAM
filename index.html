@@ -1429,6 +1429,7 @@ function route(){
   var open=PAGES.indexOf(h)>=0;
   document.body.classList.toggle('story',open);
   PAGES.forEach(function(p){var el=document.getElementById(p==='sahar-story'?'story':p);if(el)el.style.display=(open&&h===p)?'block':'none';});
+  var hm=document.getElementById('home'); if(hm) hm.style.display=open?'none':'';
   if(open) window.scrollTo(0,0);
 }
 window.addEventListener('hashchange',route);
